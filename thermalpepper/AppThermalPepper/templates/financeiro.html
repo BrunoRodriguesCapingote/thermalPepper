@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Financeiro
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold mb-1">Financeiro</h2>
+        <p class="text-muted mb-0">
+            Acompanhe as receitas, despesas e saldo das contas.
+        </p>
+    </div>
+
+    <div>
+
+        <a href="#" class="btn btn-success me-2">
+            <i class="bi bi-plus-circle"></i>
+            Nova Receita
+        </a>
+
+        <a href="#" class="btn btn-danger">
+            <i class="bi bi-dash-circle"></i>
+            Nova Despesa
+        </a>
+
+    </div>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="row">
+
+    <div class="col-lg-3 mb-4">
+
+        <div class="card p-3">
+
+            <small class="text-muted">
+                Saldo Geral
+            </small>
+
+            <h2 class="mt-2 text-success">
+                R$ 18.540,00
+            </h2>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 mb-4">
+
+        <div class="card p-3">
+
+            <small class="text-muted">
+                Receitas do mês
+            </small>
+
+            <h2 class="mt-2 text-primary">
+                R$ 12.300,00
+            </h2>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 mb-4">
+
+        <div class="card p-3">
+
+            <small class="text-muted">
+                Despesas do mês
+            </small>
+
+            <h2 class="mt-2 text-danger">
+                R$ 4.280,00
+            </h2>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 mb-4">
+
+        <div class="card p-3">
+
+            <small class="text-muted">
+                Lucro
+            </small>
+
+            <h2 class="mt-2 text-success">
+                R$ 8.020,00
+            </h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONTAS -->
+
+<div class="row">
+
+    <div class="col-lg-4 mb-4">
+
+        <div class="card">
+
+            <div class="card-header bg-white">
+
+                <h5 class="mb-0">
+                    Contas Bancárias
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <table class="table">
+
+                    <tr>
+
+                        <td>Banco do Brasil</td>
+
+                        <td class="text-end text-success">
+
+                            R$ 8.200,00
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Sicredi</td>
+
+                        <td class="text-end text-success">
+
+                            R$ 5.180,00
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Caixa</td>
+
+                        <td class="text-end">
+
+                            R$ 460,00
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Mercado Pago</td>
+
+                        <td class="text-end">
+
+                            R$ 4.700,00
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-8 mb-4">
+
+        <div class="card">
+
+            <div class="card-header bg-white">
+
+                <h5 class="mb-0">
+
+                    Fluxo Financeiro
+
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <div style="height:300px;
+                            border:2px dashed #198754;
+                            border-radius:15px;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;">
+
+                    <h5 class="text-muted">
+
+                        Gráfico do Fluxo de Caixa
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ÚLTIMOS LANÇAMENTOS -->
+
+<div class="card">
+
+    <div class="card-header bg-white">
+
+        <div class="d-flex justify-content-between">
+
+            <h5 class="mb-0">
+
+                Últimos Lançamentos
+
+            </h5>
+
+            <a href="#" class="btn btn-success btn-sm">
+
+                Ver todos
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="card-body p-0">
+
+        <table class="table table-hover mb-0">
+
+            <thead>
+
+                <tr>
+
+                    <th>Data</th>
+
+                    <th>Descrição</th>
+
+                    <th>Categoria</th>
+
+                    <th>Conta</th>
+
+                    <th class="text-end">Valor</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>10/07/2026</td>
+
+                    <td>Venda de Mudas</td>
+
+                    <td>Receita</td>
+
+                    <td>Banco do Brasil</td>
+
+                    <td class="text-end text-success">
+
+                        + R$ 1.250,00
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>09/07/2026</td>
+
+                    <td>Compra de Adubo</td>
+
+                    <td>Despesa</td>
+
+                    <td>Sicredi</td>
+
+                    <td class="text-end text-danger">
+
+                        - R$ 680,00
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>08/07/2026</td>
+
+                    <td>Conta de Energia</td>
+
+                    <td>Despesa</td>
+
+                    <td>Banco do Brasil</td>
+
+                    <td class="text-end text-danger">
+
+                        - R$ 420,00
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>07/07/2026</td>
+
+                    <td>Venda de Pimentas</td>
+
+                    <td>Receita</td>
+
+                    <td>Mercado Pago</td>
+
+                    <td class="text-end text-success">
+
+                        + R$ 2.100,00
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

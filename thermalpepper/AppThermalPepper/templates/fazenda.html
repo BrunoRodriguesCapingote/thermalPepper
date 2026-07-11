@@ -1,0 +1,724 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Fazenda - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+
+        <i class="bi bi-tree text-success"></i>
+
+        Gestão da Produção
+
+    </h2>
+
+
+    <p class="text-muted">
+
+        Administração da produção agrícola da Thermal Pepper
+
+    </p>
+
+
+</div>
+
+
+
+<button class="btn btn-success">
+
+    <i class="bi bi-plus-circle"></i>
+
+    Novo Lote
+
+</button>
+```
+
+</div>
+
+<!-- RESUMO DA PRODUÇÃO -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Lotes Ativos
+
+            </h6>
+
+
+            <h2>
+
+                12
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Em produção
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Mudas em Produção
+
+            </h6>
+
+
+            <h2>
+
+                8.500
+
+            </h2>
+
+
+            <span class="badge bg-primary">
+
+                Unidades
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Culturas Ativas
+
+            </h6>
+
+
+            <h2>
+
+                18
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Variedades
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Próxima Colheita
+
+            </h6>
+
+
+            <h2>
+
+                20 dias
+
+            </h2>
+
+
+            <span class="badge bg-warning text-dark">
+
+                Planejada
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- PRODUÇÃO ATUAL -->
+
+<div class="card p-4 mb-4">
+
+```
+<h5 class="fw-bold mb-4">
+
+    Produção Atual
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+    <table class="table align-middle">
+
+
+        <thead>
+
+
+            <tr>
+
+
+                <th>
+                    Lote
+                </th>
+
+
+                <th>
+                    Cultura
+                </th>
+
+
+                <th>
+                    Quantidade
+                </th>
+
+
+                <th>
+                    Data Inicial
+                </th>
+
+
+                <th>
+                    Fase
+                </th>
+
+
+                <th>
+                    Status
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+        <tbody>
+
+
+
+            <tr>
+
+
+                <td>
+                    TP-001
+                </td>
+
+
+                <td>
+                    Carolina Reaper
+                </td>
+
+
+                <td>
+                    1.200 mudas
+                </td>
+
+
+                <td>
+                    05/07/2026
+                </td>
+
+
+                <td>
+                    Crescimento
+                </td>
+
+
+                <td>
+
+                    <span class="badge bg-success">
+
+                        Ativo
+
+                    </span>
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    TP-002
+                </td>
+
+
+                <td>
+                    Habanero
+                </td>
+
+
+                <td>
+                    800 mudas
+                </td>
+
+
+                <td>
+                    20/06/2026
+                </td>
+
+
+                <td>
+                    Desenvolvimento
+                </td>
+
+
+                <td>
+
+                    <span class="badge bg-success">
+
+                        Ativo
+
+                    </span>
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    TP-003
+                </td>
+
+
+                <td>
+                    Dedo de Moça
+                </td>
+
+
+                <td>
+                    500 plantas
+                </td>
+
+
+                <td>
+                    15/05/2026
+                </td>
+
+
+                <td>
+                    Produção
+                </td>
+
+
+                <td>
+
+                    <span class="badge bg-primary">
+
+                        Colheita próxima
+
+                    </span>
+
+                </td>
+
+
+            </tr>
+
+
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+```
+
+</div>
+
+<!-- ATIVIDADES -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-3">
+
+            Atividades Recentes
+
+        </h5>
+
+
+
+        <ul class="list-group list-group-flush">
+
+
+            <li class="list-group-item">
+
+                <i class="bi bi-droplet text-success"></i>
+
+                Irrigação realizada no lote TP-001
+
+            </li>
+
+
+            <li class="list-group-item">
+
+                <i class="bi bi-flower1 text-success"></i>
+
+                Novo plantio cadastrado - TP-004
+
+            </li>
+
+
+            <li class="list-group-item">
+
+                <i class="bi bi-clipboard-data text-success"></i>
+
+                Análise de solo registrada
+
+            </li>
+
+
+            <li class="list-group-item">
+
+                <i class="bi bi-bag text-success"></i>
+
+                Aplicação de fertilizante realizada
+
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-3">
+
+            Controle da Produção
+
+        </h5>
+
+
+
+        <div class="d-flex justify-content-between mb-3">
+
+
+            <span>
+
+                Plantios ativos
+
+            </span>
+
+
+            <span class="badge bg-success">
+
+                12
+
+            </span>
+
+
+        </div>
+
+
+
+
+        <div class="d-flex justify-content-between mb-3">
+
+
+            <span>
+
+                Plantas saudáveis
+
+            </span>
+
+
+            <span class="badge bg-success">
+
+                95%
+
+            </span>
+
+
+        </div>
+
+
+
+
+        <div class="d-flex justify-content-between">
+
+
+            <span>
+
+                Perdas registradas
+
+            </span>
+
+
+            <span class="badge bg-danger">
+
+                3%
+
+            </span>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- LOTES -->
+
+<div class="card p-4">
+
+```
+<h5 class="fw-bold mb-4">
+
+    Lotes de Produção
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+    <table class="table align-middle">
+
+
+        <thead>
+
+
+            <tr>
+
+
+                <th>
+                    Código
+                </th>
+
+
+                <th>
+                    Produto
+                </th>
+
+
+                <th>
+                    Quantidade Inicial
+                </th>
+
+
+                <th>
+                    Quantidade Atual
+                </th>
+
+
+                <th>
+                    Responsável
+                </th>
+
+
+                <th>
+                    Ações
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+        <tbody>
+
+
+
+            <tr>
+
+
+                <td>
+                    TP-001
+                </td>
+
+
+                <td>
+                    Muda Carolina Reaper
+                </td>
+
+
+                <td>
+                    1500
+                </td>
+
+
+                <td>
+                    1200
+                </td>
+
+
+                <td>
+                    Bruno
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+                        <i class="bi bi-trash"></i>
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}

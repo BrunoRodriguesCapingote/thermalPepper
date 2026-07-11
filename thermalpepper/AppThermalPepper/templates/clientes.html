@@ -1,0 +1,625 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Clientes - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+
+        <i class="bi bi-people text-success"></i>
+
+        Clientes
+
+    </h2>
+
+
+    <p class="text-muted">
+
+        Gerenciamento dos clientes da Thermal Pepper
+
+    </p>
+
+
+</div>
+
+
+
+<button class="btn btn-success">
+
+    <i class="bi bi-person-plus"></i>
+
+    Novo Cliente
+
+</button>
+```
+
+</div>
+
+<!-- CARDS -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Total de Clientes
+
+            </h6>
+
+
+            <h2>
+
+                245
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Cadastrados
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Clientes Ativos
+
+            </h6>
+
+
+            <h2>
+
+                180
+
+            </h2>
+
+
+            <span class="badge bg-primary">
+
+                Comprando
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Novos Clientes
+
+            </h6>
+
+
+            <h2>
+
+                24
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Este mês
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Vendas Realizadas
+
+            </h6>
+
+
+            <h2>
+
+                126
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Pedidos
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- CLIENTES RECENTES -->
+
+<div class="card p-4">
+
+```
+<h5 class="fw-bold mb-4">
+
+    Clientes cadastrados
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+    <table class="table align-middle">
+
+
+        <thead>
+
+
+            <tr>
+
+
+                <th>
+                    Cliente
+                </th>
+
+
+                <th>
+                    Tipo
+                </th>
+
+
+                <th>
+                    Telefone
+                </th>
+
+
+                <th>
+                    Cidade
+                </th>
+
+
+                <th>
+                    Última Compra
+                </th>
+
+
+                <th>
+                    Status
+                </th>
+
+
+                <th>
+                    Ações
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+
+        <tbody>
+
+
+
+
+            <tr>
+
+
+                <td>
+
+                    João Silva
+
+                </td>
+
+
+                <td>
+
+                    Pessoa Física
+
+                </td>
+
+
+                <td>
+
+                    (64) 99999-9999
+
+                </td>
+
+
+                <td>
+
+                    Caldas Novas
+
+                </td>
+
+
+                <td>
+
+                    10/07/2026
+
+                </td>
+
+
+                <td>
+
+
+                    <span class="badge bg-success">
+
+                        Ativo
+
+                    </span>
+
+
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+
+                        <i class="bi bi-eye"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-primary">
+
+
+                        <i class="bi bi-pencil"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+
+                        <i class="bi bi-trash"></i>
+
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+
+
+
+            <tr>
+
+
+                <td>
+
+                    Mercado Local
+
+                </td>
+
+
+                <td>
+
+                    Empresa
+
+                </td>
+
+
+                <td>
+
+                    (64) 98888-8888
+
+                </td>
+
+
+                <td>
+
+                    Morrinhos
+
+                </td>
+
+
+                <td>
+
+                    08/07/2026
+
+                </td>
+
+
+                <td>
+
+
+                    <span class="badge bg-success">
+
+                        Ativo
+
+                    </span>
+
+
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+
+                        <i class="bi bi-eye"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-primary">
+
+
+                        <i class="bi bi-pencil"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+
+                        <i class="bi bi-trash"></i>
+
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+```
+
+</div>
+
+<!-- PERFIL DO CLIENTE -->
+
+<div class="row g-4 mt-2">
+
+```
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-3">
+
+            Melhores clientes
+
+        </h5>
+
+
+
+        <ul class="list-group list-group-flush">
+
+
+            <li class="list-group-item d-flex justify-content-between">
+
+                João Silva
+
+                <span class="badge bg-success">
+
+                    R$ 2.500,00
+
+                </span>
+
+
+            </li>
+
+
+
+            <li class="list-group-item d-flex justify-content-between">
+
+                Mercado Local
+
+                <span class="badge bg-success">
+
+                    R$ 5.800,00
+
+                </span>
+
+
+            </li>
+
+
+
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-3">
+
+            Informações comerciais
+
+        </h5>
+
+
+
+        <div class="d-flex justify-content-between mb-3">
+
+            <span>
+
+                Compras pendentes
+
+            </span>
+
+
+            <span class="badge bg-warning text-dark">
+
+                12
+
+            </span>
+
+
+        </div>
+
+
+
+        <div class="d-flex justify-content-between">
+
+
+            <span>
+
+                Clientes recorrentes
+
+            </span>
+
+
+            <span class="badge bg-success">
+
+                68%
+
+            </span>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}

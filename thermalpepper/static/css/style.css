@@ -1,0 +1,363 @@
+/* ==========================================================
+   THERMAL PEPPER - DASHBOARD
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f6f9;
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    color:#2c3e50;
+}
+
+/* ==========================================================
+   LAYOUT
+========================================================== */
+
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+.main{
+
+    flex:1;
+
+    margin-left:260px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.3s;
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:260px;
+    height:100vh;
+
+    background:#14532d;
+
+    color:#fff;
+
+    overflow-y:auto;
+
+    box-shadow:4px 0 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.logo{
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#fff;
+}
+
+.logo i{
+
+    font-size:30px;
+
+    color:#ffc107;
+}
+
+.sidebar hr{
+
+    border-color:rgba(255,255,255,.15);
+
+    margin:0;
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:15px 0;
+}
+
+.sidebar li{
+
+    margin-bottom:6px;
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 25px;
+
+    color:#d9e6dd;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.sidebar a:hover{
+
+    background:#198754;
+
+    color:#fff;
+
+    padding-left:32px;
+}
+
+.sidebar i{
+
+    font-size:20px;
+
+    width:22px;
+
+    text-align:center;
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar{
+
+    height:70px;
+
+    border-bottom:1px solid #e9ecef;
+
+    z-index:50;
+}
+
+.navbar .form-control{
+
+    max-width:450px;
+}
+
+.dropdown button{
+
+    border-radius:50px;
+}
+
+/* ==========================================================
+   CONTEÚDO
+========================================================== */
+
+.container-fluid{
+
+    padding:30px;
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card{
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+    transition:.25s;
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+}
+
+.card-title{
+
+    font-size:15px;
+
+    color:#6c757d;
+}
+
+.card h2{
+
+    font-weight:bold;
+
+    color:#14532d;
+}
+
+/* ==========================================================
+   TABELAS
+========================================================== */
+
+.table{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+.table thead{
+
+    background:#198754;
+
+    color:#fff;
+}
+
+.table th{
+
+    border:none;
+}
+
+.table td{
+
+    vertical-align:middle;
+}
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.btn-success{
+
+    background:#198754;
+
+    border:none;
+}
+
+.btn-success:hover{
+
+    background:#157347;
+}
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.badge{
+
+    border-radius:20px;
+
+    padding:8px 12px;
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+.sidebar::-webkit-scrollbar{
+
+    width:8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:#1d6f42;
+
+    border-radius:20px;
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:80px;
+    }
+
+    .sidebar span{
+
+        display:none;
+    }
+
+    .sidebar a{
+
+        justify-content:center;
+        padding:18px;
+    }
+
+    .sidebar a:hover{
+
+        padding:18px;
+    }
+
+    .sidebar i{
+
+        font-size:22px;
+    }
+
+    .main{
+
+        margin-left:80px;
+    }
+
+    .logo span{
+
+        display:none;
+    }
+}
+
+@media(max-width:768px){
+
+    .main{
+
+        margin-left:0;
+    }
+
+    .sidebar{
+
+        display:none;
+    }
+
+    .navbar .form-control{
+
+        display:none;
+    }
+}
+
+/* ==========================================================
+   ESCONDER SIDEBAR PELO BOTÃO
+========================================================== */
+
+.sidebar-hidden .sidebar{
+
+    transform: translateX(-260px);
+
+}
+
+
+.sidebar-hidden .main{
+
+    margin-left:0;
+
+}

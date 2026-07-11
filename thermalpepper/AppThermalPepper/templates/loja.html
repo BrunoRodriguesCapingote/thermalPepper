@@ -1,0 +1,637 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Loja - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+
+        <i class="bi bi-shop text-success"></i>
+
+        Loja
+
+    </h2>
+
+
+    <p class="text-muted">
+
+        Gerenciamento das vendas e pedidos da Thermal Pepper
+
+    </p>
+
+
+</div>
+
+
+
+<button class="btn btn-success">
+
+    <i class="bi bi-plus-circle"></i>
+
+    Novo Pedido
+
+</button>
+```
+
+</div>
+
+<!-- CARDS -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Vendas Totais
+
+            </h6>
+
+
+            <h2>
+
+                R$ 32.500,00
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Faturamento
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Pedidos
+
+            </h6>
+
+
+            <h2>
+
+                126
+
+            </h2>
+
+
+            <span class="badge bg-primary">
+
+                Total
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Pendentes
+
+            </h6>
+
+
+            <h2>
+
+                12
+
+            </h2>
+
+
+            <span class="badge bg-warning text-dark">
+
+                Processando
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Clientes
+
+            </h6>
+
+
+            <h2>
+
+                87
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Cadastrados
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- PRODUTOS MAIS VENDIDOS -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-3">
+
+            Produtos mais vendidos
+
+        </h5>
+
+
+
+        <ul class="list-group list-group-flush">
+
+
+            <li class="list-group-item d-flex justify-content-between">
+
+                Muda Carolina Reaper
+
+                <span class="badge bg-success">
+
+                    85 vendas
+
+                </span>
+
+            </li>
+
+
+            <li class="list-group-item d-flex justify-content-between">
+
+                Molho Premium
+
+                <span class="badge bg-success">
+
+                    62 vendas
+
+                </span>
+
+            </li>
+
+
+            <li class="list-group-item d-flex justify-content-between">
+
+                Pimenta em Conserva
+
+                <span class="badge bg-success">
+
+                    48 vendas
+
+                </span>
+
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-3">
+
+            Status dos pedidos
+
+        </h5>
+
+
+
+        <div class="d-flex justify-content-between mb-3">
+
+
+            <span>
+
+                Entregues
+
+            </span>
+
+
+            <span class="badge bg-success">
+
+                98
+
+            </span>
+
+
+        </div>
+
+
+
+        <div class="d-flex justify-content-between mb-3">
+
+
+            <span>
+
+                Em preparo
+
+            </span>
+
+
+            <span class="badge bg-primary">
+
+                16
+
+            </span>
+
+
+        </div>
+
+
+
+        <div class="d-flex justify-content-between">
+
+
+            <span>
+
+                Cancelados
+
+            </span>
+
+
+            <span class="badge bg-danger">
+
+                4
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- TABELA -->
+
+<div class="card p-4">
+
+```
+<h5 class="fw-bold mb-4">
+
+    Últimos pedidos
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+
+    <table class="table align-middle">
+
+
+
+        <thead>
+
+
+            <tr>
+
+
+                <th>
+                    Pedido
+                </th>
+
+
+                <th>
+                    Cliente
+                </th>
+
+
+                <th>
+                    Produto
+                </th>
+
+
+                <th>
+                    Data
+                </th>
+
+
+                <th>
+                    Valor
+                </th>
+
+
+                <th>
+                    Status
+                </th>
+
+
+                <th>
+                    Ações
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+
+
+        <tbody>
+
+
+
+            <tr>
+
+
+                <td>
+
+                    #1025
+
+                </td>
+
+
+                <td>
+
+                    João Silva
+
+                </td>
+
+
+                <td>
+
+                    Mudas + Molhos
+
+                </td>
+
+
+                <td>
+
+                    10/07/2026
+
+                </td>
+
+
+                <td>
+
+                    R$ 180,00
+
+                </td>
+
+
+                <td>
+
+
+                    <span class="badge bg-success">
+
+                        Entregue
+
+                    </span>
+
+
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+
+                        <i class="bi bi-eye"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+
+                        <i class="bi bi-trash"></i>
+
+
+                    </button>
+
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+
+
+            <tr>
+
+
+                <td>
+
+                    #1026
+
+                </td>
+
+
+                <td>
+
+                    Mercado Local
+
+                </td>
+
+
+                <td>
+
+                    Pimentas em conserva
+
+                </td>
+
+
+                <td>
+
+                    09/07/2026
+
+                </td>
+
+
+                <td>
+
+                    R$ 650,00
+
+                </td>
+
+
+                <td>
+
+
+                    <span class="badge bg-warning text-dark">
+
+                        Processando
+
+                    </span>
+
+
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+
+                        <i class="bi bi-eye"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+
+                        <i class="bi bi-trash"></i>
+
+
+                    </button>
+
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+        </tbody>
+
+
+
+    </table>
+
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,359 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Contas - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+        <i class="bi bi-bank text-success"></i>
+        Contas
+    </h2>
+
+    <p class="text-muted">
+        Gerenciamento das contas financeiras da Thermal Pepper
+    </p>
+
+</div>
+
+
+<button class="btn btn-success">
+
+    <i class="bi bi-plus-circle"></i>
+
+    Nova Conta
+
+</button>
+```
+
+</div>
+
+<!-- CARDS -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-3">
+
+    <div class="card p-3">
+
+        <div class="card-body">
+
+            <h6 class="card-title">
+                Saldo Atual
+            </h6>
+
+
+            <h2>
+                R$ 12.500,00
+            </h2>
+
+
+            <span class="badge bg-success">
+                Positivo
+            </span>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="col-md-3">
+
+    <div class="card p-3">
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+                Contas Bancárias
+            </h6>
+
+
+            <h2>
+                3
+            </h2>
+
+
+            <span class="badge bg-primary">
+                Ativas
+            </span>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+                Contas a Pagar
+            </h6>
+
+
+            <h2>
+                R$ 3.200,00
+            </h2>
+
+
+            <span class="badge bg-danger">
+                Pendentes
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+                Contas a Receber
+            </h6>
+
+
+            <h2>
+                R$ 8.700,00
+            </h2>
+
+
+            <span class="badge bg-success">
+                Recebimentos
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- TABELA -->
+
+<div class="card p-4">
+
+```
+<h5 class="mb-4 fw-bold">
+
+    Contas cadastradas
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+    <table class="table align-middle">
+
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    Conta
+                </th>
+
+                <th>
+                    Banco
+                </th>
+
+                <th>
+                    Tipo
+                </th>
+
+                <th>
+                    Saldo
+                </th>
+
+                <th>
+                    Status
+                </th>
+
+                <th>
+                    Ações
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+        <tbody>
+
+
+            <tr>
+
+
+                <td>
+                    Conta Principal
+                </td>
+
+
+                <td>
+                    Banco do Brasil
+                </td>
+
+
+                <td>
+                    Corrente
+                </td>
+
+
+                <td>
+                    R$ 8.500,00
+                </td>
+
+
+                <td>
+
+                    <span class="badge bg-success">
+                        Ativa
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <button class="btn btn-sm btn-outline-success">
+
+                        <i class="bi bi-pencil"></i>
+
+                    </button>
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+                        <i class="bi bi-trash"></i>
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Caixa Interno
+                </td>
+
+
+                <td>
+                    -
+                </td>
+
+
+                <td>
+                    Dinheiro
+                </td>
+
+
+                <td>
+                    R$ 1.500,00
+                </td>
+
+
+                <td>
+
+                    <span class="badge bg-success">
+                        Ativa
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <button class="btn btn-sm btn-outline-success">
+
+                        <i class="bi bi-pencil"></i>
+
+                    </button>
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+                        <i class="bi bi-trash"></i>
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}

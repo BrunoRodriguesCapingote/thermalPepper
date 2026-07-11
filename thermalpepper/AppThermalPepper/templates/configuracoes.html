@@ -1,0 +1,522 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Configurações - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+
+        <i class="bi bi-gear text-success"></i>
+
+        Configurações
+
+    </h2>
+
+
+    <p class="text-muted">
+
+        Gerenciamento das configurações do sistema
+
+    </p>
+
+
+</div>
+```
+
+</div>
+
+<div class="row g-4">
+
+```
+<!-- SISTEMA -->
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-4">
+
+            <i class="bi bi-building"></i>
+
+            Dados da Empresa
+
+        </h5>
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Nome da empresa
+
+            </label>
+
+
+            <input class="form-control"
+
+                   value="Thermal Pepper">
+
+
+        </div>
+
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                E-mail
+
+            </label>
+
+
+            <input class="form-control"
+
+                   value="contato@thermalpepper.com.br">
+
+
+        </div>
+
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Telefone
+
+            </label>
+
+
+            <input class="form-control"
+
+                   value="(64) 99999-9999">
+
+
+        </div>
+
+
+        <button class="btn btn-success">
+
+            Salvar alterações
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- USUARIO -->
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-4">
+
+            <i class="bi bi-person"></i>
+
+            Usuário
+
+        </h5>
+
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Nome
+
+            </label>
+
+
+            <input class="form-control"
+
+                   value="Bruno">
+
+
+        </div>
+
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Perfil
+
+            </label>
+
+
+            <select class="form-select">
+
+
+                <option>
+                    Administrador
+                </option>
+
+
+                <option>
+                    Funcionário
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+
+        <button class="btn btn-success">
+
+            Atualizar perfil
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- FINANCEIRO -->
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-4">
+
+            <i class="bi bi-cash-stack"></i>
+
+            Financeiro
+
+        </h5>
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Moeda
+
+            </label>
+
+
+            <select class="form-select">
+
+
+                <option>
+                    Real Brasileiro (R$)
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Forma padrão de pagamento
+
+            </label>
+
+
+            <select class="form-select">
+
+
+                <option>
+                    Pix
+                </option>
+
+
+                <option>
+                    Cartão
+                </option>
+
+
+                <option>
+                    Dinheiro
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+        <button class="btn btn-success">
+
+            Salvar
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PRODUÇÃO -->
+
+
+<div class="col-md-6">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-4">
+
+            <i class="bi bi-tree"></i>
+
+            Produção
+
+        </h5>
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Unidade principal
+
+            </label>
+
+
+            <select class="form-select">
+
+
+                <option>
+                    Unidade
+                </option>
+
+
+                <option>
+                    Kg
+                </option>
+
+
+                <option>
+                    Litros
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <div class="mb-3">
+
+
+            <label class="form-label">
+
+                Controle de estoque
+
+            </label>
+
+
+            <select class="form-select">
+
+
+                <option>
+                    Automático
+                </option>
+
+
+                <option>
+                    Manual
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+        <button class="btn btn-success">
+
+            Salvar
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- NOTIFICACOES -->
+
+
+<div class="col-md-12">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold mb-4">
+
+            <i class="bi bi-bell"></i>
+
+            Notificações
+
+        </h5>
+
+
+
+
+        <div class="form-check mb-3">
+
+
+            <input class="form-check-input"
+
+                   type="checkbox"
+
+                   checked>
+
+
+            <label class="form-check-label">
+
+                Avisar quando estoque estiver baixo
+
+            </label>
+
+
+        </div>
+
+
+
+
+        <div class="form-check mb-3">
+
+
+            <input class="form-check-input"
+
+                   type="checkbox"
+
+                   checked>
+
+
+            <label class="form-check-label">
+
+                Avisar contas próximas do vencimento
+
+            </label>
+
+
+        </div>
+
+
+
+
+        <div class="form-check">
+
+
+            <input class="form-check-input"
+
+                   type="checkbox">
+
+
+            <label class="form-check-label">
+
+                Receber relatórios semanais
+
+            </label>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}

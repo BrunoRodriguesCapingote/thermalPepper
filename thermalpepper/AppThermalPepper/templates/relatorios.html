@@ -1,0 +1,628 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Relatórios - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+
+        <i class="bi bi-graph-up-arrow text-success"></i>
+
+        Relatórios
+
+    </h2>
+
+
+    <p class="text-muted">
+
+        Análises e indicadores da Thermal Pepper
+
+    </p>
+
+
+</div>
+
+
+
+<button class="btn btn-success">
+
+    <i class="bi bi-download"></i>
+
+    Exportar
+
+</button>
+```
+
+</div>
+
+<!-- FILTROS -->
+
+<div class="card p-4 mb-4">
+
+```
+<h5 class="fw-bold mb-3">
+
+    Filtros de análise
+
+</h5>
+
+
+
+<div class="row g-3">
+
+
+    <div class="col-md-4">
+
+
+        <label class="form-label">
+
+            Período
+
+        </label>
+
+
+        <select class="form-select">
+
+
+            <option>
+                Julho 2026
+            </option>
+
+
+            <option>
+                Junho 2026
+            </option>
+
+
+            <option>
+                Maio 2026
+            </option>
+
+
+        </select>
+
+
+    </div>
+
+
+
+    <div class="col-md-4">
+
+
+        <label class="form-label">
+
+            Categoria
+
+        </label>
+
+
+        <select class="form-select">
+
+
+            <option>
+                Todas
+            </option>
+
+
+            <option>
+                Financeiro
+            </option>
+
+
+            <option>
+                Produção
+            </option>
+
+
+            <option>
+                Vendas
+            </option>
+
+
+        </select>
+
+
+    </div>
+
+
+
+    <div class="col-md-4 d-flex align-items-end">
+
+
+        <button class="btn btn-success w-100">
+
+
+            <i class="bi bi-search"></i>
+
+            Gerar Relatório
+
+
+        </button>
+
+
+    </div>
+
+
+
+</div>
+```
+
+</div>
+
+<!-- INDICADORES -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Faturamento
+
+            </h6>
+
+
+            <h2>
+
+                R$ 32.500,00
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                +12%
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Despesas
+
+            </h6>
+
+
+            <h2>
+
+                R$ 14.600,00
+
+            </h2>
+
+
+            <span class="badge bg-danger">
+
+                Custos
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Lucro
+
+            </h6>
+
+
+            <h2>
+
+                R$ 17.900,00
+
+            </h2>
+
+
+            <span class="badge bg-success">
+
+                Resultado
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Produção
+
+            </h6>
+
+
+            <h2>
+
+                8.500
+
+            </h2>
+
+
+            <span class="badge bg-primary">
+
+                Mudas
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- RELATÓRIOS DISPONÍVEIS -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-4">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold">
+
+            <i class="bi bi-cash-stack"></i>
+
+            Financeiro
+
+        </h5>
+
+
+        <p class="text-muted">
+
+            Análise de receitas, despesas e lucro.
+
+        </p>
+
+
+        <button class="btn btn-outline-success">
+
+            Visualizar
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold">
+
+            <i class="bi bi-box-seam"></i>
+
+            Estoque
+
+        </h5>
+
+
+        <p class="text-muted">
+
+            Produtos, entradas e saídas.
+
+        </p>
+
+
+        <button class="btn btn-outline-success">
+
+            Visualizar
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+    <div class="card p-4">
+
+
+        <h5 class="fw-bold">
+
+            <i class="bi bi-tree"></i>
+
+            Produção
+
+        </h5>
+
+
+        <p class="text-muted">
+
+            Desenvolvimento dos cultivos e lotes.
+
+        </p>
+
+
+        <button class="btn btn-outline-success">
+
+            Visualizar
+
+        </button>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- TABELA -->
+
+<div class="card p-4">
+
+```
+<h5 class="fw-bold mb-4">
+
+    Últimos relatórios gerados
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+    <table class="table align-middle">
+
+
+        <thead>
+
+
+            <tr>
+
+
+                <th>
+                    Relatório
+                </th>
+
+
+                <th>
+                    Categoria
+                </th>
+
+
+                <th>
+                    Data
+                </th>
+
+
+                <th>
+                    Responsável
+                </th>
+
+
+                <th>
+                    Ação
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+        <tbody>
+
+
+
+            <tr>
+
+
+                <td>
+                    Relatório Financeiro Mensal
+                </td>
+
+
+                <td>
+                    Financeiro
+                </td>
+
+
+                <td>
+                    10/07/2026
+                </td>
+
+
+                <td>
+                    Bruno
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-primary">
+
+                        <i class="bi bi-download"></i>
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Relatório de Produção
+                </td>
+
+
+                <td>
+                    Fazenda
+                </td>
+
+
+                <td>
+                    05/07/2026
+                </td>
+
+
+                <td>
+                    Bruno
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-primary">
+
+                        <i class="bi bi-download"></i>
+
+                    </button>
+
+
+                </td>
+
+
+            </tr>
+
+
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}

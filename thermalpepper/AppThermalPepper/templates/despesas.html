@@ -1,0 +1,463 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Despesas - Thermal Pepper
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+```
+<div>
+
+    <h2 class="fw-bold">
+
+        <i class="bi bi-wallet2 text-success"></i>
+
+        Despesas
+
+    </h2>
+
+
+    <p class="text-muted">
+
+        Controle dos gastos e custos da Thermal Pepper
+
+    </p>
+
+
+</div>
+
+
+
+<button class="btn btn-success">
+
+    <i class="bi bi-plus-circle"></i>
+
+    Nova Despesa
+
+</button>
+```
+
+</div>
+
+<!-- CARDS -->
+
+<div class="row g-4 mb-4">
+
+```
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Total de Despesas
+
+            </h6>
+
+
+            <h2>
+
+                R$ 14.600,00
+
+            </h2>
+
+
+            <span class="badge bg-danger">
+
+                Saídas
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Despesas do Mês
+
+            </h6>
+
+
+            <h2>
+
+                R$ 4.250,00
+
+            </h2>
+
+
+            <span class="badge bg-primary">
+
+                Julho
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Pendentes
+
+            </h6>
+
+
+            <h2>
+
+                R$ 1.800,00
+
+            </h2>
+
+
+            <span class="badge bg-warning text-dark">
+
+                A pagar
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-3">
+
+
+    <div class="card p-3">
+
+
+        <div class="card-body">
+
+
+            <h6 class="card-title">
+
+                Maior Gasto
+
+            </h6>
+
+
+            <h2>
+
+                R$ 2.500,00
+
+            </h2>
+
+
+            <span class="badge bg-danger">
+
+                Insumos
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- TABELA -->
+
+<div class="card p-4">
+
+```
+<h5 class="fw-bold mb-4">
+
+    Histórico de Despesas
+
+</h5>
+
+
+
+<div class="table-responsive">
+
+
+
+    <table class="table align-middle">
+
+
+
+        <thead>
+
+
+            <tr>
+
+
+                <th>
+                    Data
+                </th>
+
+
+                <th>
+                    Descrição
+                </th>
+
+
+                <th>
+                    Categoria
+                </th>
+
+
+                <th>
+                    Fornecedor
+                </th>
+
+
+                <th>
+                    Valor
+                </th>
+
+
+                <th>
+                    Status
+                </th>
+
+
+                <th>
+                    Ações
+                </th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+
+
+
+        <tbody>
+
+
+
+            <tr>
+
+
+                <td>
+                    10/07/2026
+                </td>
+
+
+                <td>
+                    Compra de fertilizantes
+                </td>
+
+
+                <td>
+                    Insumos
+                </td>
+
+
+                <td>
+                    Agropecuária Central
+                </td>
+
+
+                <td>
+
+                    R$ 850,00
+
+                </td>
+
+
+                <td>
+
+
+                    <span class="badge bg-success">
+
+                        Pago
+
+                    </span>
+
+
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+
+                        <i class="bi bi-pencil"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+
+                        <i class="bi bi-trash"></i>
+
+
+                    </button>
+
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    08/07/2026
+                </td>
+
+
+                <td>
+                    Conta de energia elétrica
+                </td>
+
+
+                <td>
+                    Operacional
+                </td>
+
+
+                <td>
+                    Concessionária
+                </td>
+
+
+                <td>
+
+                    R$ 420,00
+
+                </td>
+
+
+                <td>
+
+
+                    <span class="badge bg-warning text-dark">
+
+                        Pendente
+
+                    </span>
+
+
+                </td>
+
+
+                <td>
+
+
+                    <button class="btn btn-sm btn-outline-success">
+
+
+                        <i class="bi bi-pencil"></i>
+
+
+                    </button>
+
+
+
+                    <button class="btn btn-sm btn-outline-danger">
+
+
+                        <i class="bi bi-trash"></i>
+
+
+                    </button>
+
+
+
+                </td>
+
+
+            </tr>
+
+
+
+
+
+        </tbody>
+
+
+
+    </table>
+
+
+
+</div>
+```
+
+</div>
+
+{% endblock %}
