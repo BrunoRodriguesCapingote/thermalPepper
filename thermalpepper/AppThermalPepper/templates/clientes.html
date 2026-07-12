@@ -1,3 +1,4 @@
+```html
 {% extends "base.html" %}
 
 {% load static %}
@@ -8,39 +9,33 @@ Clientes - Thermal Pepper
 
 {% block content %}
 
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
 
-```
-<div>
+    <div>
 
-    <h2 class="fw-bold">
+        <h2 class="fw-bold mb-1">
 
-        <i class="bi bi-people text-success"></i>
+            <i class="bi bi-people text-success"></i>
 
-        Clientes
+            Clientes
 
-    </h2>
+        </h2>
 
+        <p class="text-muted mb-0">
 
-    <p class="text-muted">
+            Gerenciamento dos clientes da Thermal Pepper
 
-        Gerenciamento dos clientes da Thermal Pepper
+        </p>
 
-    </p>
+    </div>
 
+    <button class="btn btn-success w-100 w-md-auto">
 
-</div>
+        <i class="bi bi-person-plus"></i>
 
+        Novo Cliente
 
-
-<button class="btn btn-success">
-
-    <i class="bi bi-person-plus"></i>
-
-    Novo Cliente
-
-</button>
-```
+    </button>
 
 </div>
 
@@ -48,578 +43,307 @@ Clientes - Thermal Pepper
 
 <div class="row g-4 mb-4">
 
-```
-<div class="col-md-3">
+    <div class="col-12 col-sm-6 col-xl-3">
 
+        <div class="card p-3">
 
-    <div class="card p-3">
+            <div class="card-body">
 
+                <h6 class="card-title">
+                    Total de Clientes
+                </h6>
 
-        <div class="card-body">
+                <h2>
+                    245
+                </h2>
 
+                <span class="badge bg-success">
+                    Cadastrados
+                </span>
 
-            <h6 class="card-title">
-
-                Total de Clientes
-
-            </h6>
-
-
-            <h2>
-
-                245
-
-            </h2>
-
-
-            <span class="badge bg-success">
-
-                Cadastrados
-
-            </span>
-
+            </div>
 
         </div>
 
-
     </div>
 
+    <div class="col-12 col-sm-6 col-xl-3">
 
-</div>
+        <div class="card p-3">
 
+            <div class="card-body">
 
+                <h6 class="card-title">
+                    Clientes Ativos
+                </h6>
 
+                <h2>
+                    180
+                </h2>
 
+                <span class="badge bg-primary">
+                    Comprando
+                </span>
 
-
-
-<div class="col-md-3">
-
-
-    <div class="card p-3">
-
-
-        <div class="card-body">
-
-
-            <h6 class="card-title">
-
-                Clientes Ativos
-
-            </h6>
-
-
-            <h2>
-
-                180
-
-            </h2>
-
-
-            <span class="badge bg-primary">
-
-                Comprando
-
-            </span>
-
+            </div>
 
         </div>
 
-
     </div>
 
+    <div class="col-12 col-sm-6 col-xl-3">
 
-</div>
+        <div class="card p-3">
 
+            <div class="card-body">
 
+                <h6 class="card-title">
+                    Novos Clientes
+                </h6>
 
+                <h2>
+                    24
+                </h2>
 
+                <span class="badge bg-success">
+                    Este mês
+                </span>
 
-
-
-<div class="col-md-3">
-
-
-    <div class="card p-3">
-
-
-        <div class="card-body">
-
-
-            <h6 class="card-title">
-
-                Novos Clientes
-
-            </h6>
-
-
-            <h2>
-
-                24
-
-            </h2>
-
-
-            <span class="badge bg-success">
-
-                Este mês
-
-            </span>
-
+            </div>
 
         </div>
 
-
     </div>
 
+    <div class="col-12 col-sm-6 col-xl-3">
 
-</div>
+        <div class="card p-3">
 
+            <div class="card-body">
 
+                <h6 class="card-title">
+                    Vendas Realizadas
+                </h6>
 
+                <h2>
+                    126
+                </h2>
 
+                <span class="badge bg-success">
+                    Pedidos
+                </span>
 
-
-
-<div class="col-md-3">
-
-
-    <div class="card p-3">
-
-
-        <div class="card-body">
-
-
-            <h6 class="card-title">
-
-                Vendas Realizadas
-
-            </h6>
-
-
-            <h2>
-
-                126
-
-            </h2>
-
-
-            <span class="badge bg-success">
-
-                Pedidos
-
-            </span>
-
+            </div>
 
         </div>
 
+    </div>
+
+</div>
+
+<!-- CLIENTES -->
+
+<div class="card p-3 p-md-4">
+
+    <h5 class="fw-bold mb-4">
+        Clientes cadastrados
+    </h5>
+
+    <div class="table-responsive">
+
+        <table class="table table-hover align-middle text-nowrap">
+
+            <thead>
+
+                <tr>
+
+                    <th>Cliente</th>
+                    <th>Tipo</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                    <th>Última Compra</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>João Silva</td>
+
+                    <td>Pessoa Física</td>
+
+                    <td>(64) 99999-9999</td>
+
+                    <td>Caldas Novas</td>
+
+                    <td>10/07/2026</td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+                            Ativo
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <div class="d-flex gap-1 justify-content-center">
+
+                            <button class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Mercado Local</td>
+
+                    <td>Empresa</td>
+
+                    <td>(64) 98888-8888</td>
+
+                    <td>Morrinhos</td>
+
+                    <td>08/07/2026</td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+                            Ativo
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <div class="d-flex gap-1 justify-content-center">
+
+                            <button class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
 
     </div>
 
-
-</div>
-```
-
 </div>
 
-<!-- CLIENTES RECENTES -->
-
-<div class="card p-4">
-
-```
-<h5 class="fw-bold mb-4">
-
-    Clientes cadastrados
-
-</h5>
-
-
-
-<div class="table-responsive">
-
-
-    <table class="table align-middle">
-
-
-        <thead>
-
-
-            <tr>
-
-
-                <th>
-                    Cliente
-                </th>
-
-
-                <th>
-                    Tipo
-                </th>
-
-
-                <th>
-                    Telefone
-                </th>
-
-
-                <th>
-                    Cidade
-                </th>
-
-
-                <th>
-                    Última Compra
-                </th>
-
-
-                <th>
-                    Status
-                </th>
-
-
-                <th>
-                    Ações
-                </th>
-
-
-            </tr>
-
-
-        </thead>
-
-
-
-
-        <tbody>
-
-
-
-
-            <tr>
-
-
-                <td>
-
-                    João Silva
-
-                </td>
-
-
-                <td>
-
-                    Pessoa Física
-
-                </td>
-
-
-                <td>
-
-                    (64) 99999-9999
-
-                </td>
-
-
-                <td>
-
-                    Caldas Novas
-
-                </td>
-
-
-                <td>
-
-                    10/07/2026
-
-                </td>
-
-
-                <td>
-
-
-                    <span class="badge bg-success">
-
-                        Ativo
-
-                    </span>
-
-
-                </td>
-
-
-                <td>
-
-
-                    <button class="btn btn-sm btn-outline-success">
-
-
-                        <i class="bi bi-eye"></i>
-
-
-                    </button>
-
-
-
-                    <button class="btn btn-sm btn-outline-primary">
-
-
-                        <i class="bi bi-pencil"></i>
-
-
-                    </button>
-
-
-
-                    <button class="btn btn-sm btn-outline-danger">
-
-
-                        <i class="bi bi-trash"></i>
-
-
-                    </button>
-
-
-                </td>
-
-
-            </tr>
-
-
-
-
-
-
-
-
-            <tr>
-
-
-                <td>
-
-                    Mercado Local
-
-                </td>
-
-
-                <td>
-
-                    Empresa
-
-                </td>
-
-
-                <td>
-
-                    (64) 98888-8888
-
-                </td>
-
-
-                <td>
-
-                    Morrinhos
-
-                </td>
-
-
-                <td>
-
-                    08/07/2026
-
-                </td>
-
-
-                <td>
-
-
-                    <span class="badge bg-success">
-
-                        Ativo
-
-                    </span>
-
-
-                </td>
-
-
-                <td>
-
-
-                    <button class="btn btn-sm btn-outline-success">
-
-
-                        <i class="bi bi-eye"></i>
-
-
-                    </button>
-
-
-
-                    <button class="btn btn-sm btn-outline-primary">
-
-
-                        <i class="bi bi-pencil"></i>
-
-
-                    </button>
-
-
-
-                    <button class="btn btn-sm btn-outline-danger">
-
-
-                        <i class="bi bi-trash"></i>
-
-
-                    </button>
-
-
-                </td>
-
-
-            </tr>
-
-
-
-
-
-        </tbody>
-
-
-    </table>
-
-
-</div>
-```
-
-</div>
-
-<!-- PERFIL DO CLIENTE -->
+<!-- INFORMAÇÕES -->
 
 <div class="row g-4 mt-2">
 
-```
-<div class="col-md-6">
+    <div class="col-12 col-lg-6">
 
+        <div class="card p-4">
 
-    <div class="card p-4">
+            <h5 class="fw-bold mb-3">
 
+                Melhores clientes
 
-        <h5 class="fw-bold mb-3">
+            </h5>
 
-            Melhores clientes
+            <ul class="list-group list-group-flush">
 
-        </h5>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-2">
 
+                    João Silva
 
+                    <span class="badge bg-success">
+                        R$ 2.500,00
+                    </span>
 
-        <ul class="list-group list-group-flush">
+                </li>
 
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-2">
 
-            <li class="list-group-item d-flex justify-content-between">
+                    Mercado Local
 
-                João Silva
+                    <span class="badge bg-success">
+                        R$ 5.800,00
+                    </span>
 
-                <span class="badge bg-success">
+                </li>
 
-                    R$ 2.500,00
-
-                </span>
-
-
-            </li>
-
-
-
-            <li class="list-group-item d-flex justify-content-between">
-
-                Mercado Local
-
-                <span class="badge bg-success">
-
-                    R$ 5.800,00
-
-                </span>
-
-
-            </li>
-
-
-
-        </ul>
-
-
-    </div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="col-md-6">
-
-
-    <div class="card p-4">
-
-
-        <h5 class="fw-bold mb-3">
-
-            Informações comerciais
-
-        </h5>
-
-
-
-        <div class="d-flex justify-content-between mb-3">
-
-            <span>
-
-                Compras pendentes
-
-            </span>
-
-
-            <span class="badge bg-warning text-dark">
-
-                12
-
-            </span>
-
+            </ul>
 
         </div>
 
+    </div>
 
+    <div class="col-12 col-lg-6">
 
-        <div class="d-flex justify-content-between">
+        <div class="card p-4">
 
+            <h5 class="fw-bold mb-3">
 
-            <span>
+                Informações comerciais
 
-                Clientes recorrentes
+            </h5>
 
-            </span>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
 
+                <span>
+                    Compras pendentes
+                </span>
 
-            <span class="badge bg-success">
+                <span class="badge bg-warning text-dark">
+                    12
+                </span>
 
-                68%
+            </div>
 
-            </span>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
 
+                <span>
+                    Clientes recorrentes
+                </span>
+
+                <span class="badge bg-success">
+                    68%
+                </span>
+
+            </div>
 
         </div>
 
-
-
     </div>
-
-
-</div>
-```
 
 </div>
 
 {% endblock %}
+```

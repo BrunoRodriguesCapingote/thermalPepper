@@ -147,24 +147,13 @@ body{
    NAVBAR
 ========================================================== */
 
-/* ==========================================================
-   NAVBAR
-========================================================== */
-
 .navbar{
 
     height:70px;
 
     border-bottom:1px solid #e9ecef;
 
-    position:sticky;
-
-    top:0;
-
-    z-index:1100;
-
-    background:#fff;
-
+    z-index:50;
 }
 
 .navbar .form-control{
@@ -172,6 +161,10 @@ body{
     max-width:450px;
 }
 
+.dropdown button{
+
+    border-radius:50px;
+}
 
 /* ==========================================================
    CONTEÚDO
@@ -337,24 +330,19 @@ body{
 @media(max-width:768px){
 
     .main{
+
         margin-left:0;
     }
 
     .sidebar{
 
-        top:70px;
-
-        height:calc(100vh - 70px);
-
-        width:260px;
-
         transform:translateX(-260px);
 
-        z-index:1050;
+        z-index:1000;
 
     }
 
-    body.sidebar-hidden .sidebar{
+    .sidebar-hidden .sidebar{
 
         transform:translateX(0);
 
@@ -362,31 +350,27 @@ body{
 
     .navbar .form-control{
 
-        width:120px;
-
+        display:none;
     }
-
 }
 
 /* ==========================================================
    ESCONDER SIDEBAR PELO BOTÃO
 ========================================================== */
 
-@media (min-width:769px){
+.sidebar-hidden .sidebar{
 
-    body.sidebar-hidden .sidebar{
-
-        transform:translateX(-260px);
-
-    }
-
-    body.sidebar-hidden .main{
-
-        margin-left:0;
-
-    }
+    transform: translateX(-260px);
 
 }
+
+
+.sidebar-hidden .main{
+
+    margin-left:0;
+
+}
+
 /* ==========================================================
    LOGIN
 ========================================================== */

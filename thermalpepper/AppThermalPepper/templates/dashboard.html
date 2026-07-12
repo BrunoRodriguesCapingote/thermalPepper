@@ -1,51 +1,38 @@
 {% extends 'base.html' %}
-
 {% block title %}
 Dashboard
 {% endblock %}
-
 {% block content %}
-
 <div class="row mb-4">
-
-    <div class="col-lg-3 col-md-6 mb-3">
+    <div class="col-12 col-md-6 col-lg-3 mb-3">
         <div class="card p-3">
             <h6 class="card-title">Saldo Atual</h6>
             <h2>R$ 15.480,00</h2>
         </div>
     </div>
-
-    <div class="col-lg-3 col-md-6 mb-3">
+    <div class="col-12 col-md-6 col-lg-3 mb-3">
         <div class="card p-3">
             <h6 class="card-title">Receitas</h6>
             <h2>R$ 9.500,00</h2>
         </div>
     </div>
-
-    <div class="col-lg-3 col-md-6 mb-3">
+    <div class="col-12 col-md-6 col-lg-3 mb-3">
         <div class="card p-3">
             <h6 class="card-title">Despesas</h6>
             <h2>R$ 2.100,00</h2>
         </div>
     </div>
-
-    <div class="col-lg-3 col-md-6 mb-3">
+    <div class="col-12 col-md-6 col-lg-3 mb-3">
         <div class="card p-3">
             <h6 class="card-title">Lucro</h6>
             <h2>R$ 7.400,00</h2>
         </div>
     </div>
-
 </div>
-
-<div class="row">
-
-    <div class="col-lg-8">
-
+<div class="row g-3">
+    <div class="col-12 col-lg-8">
         <div class="card p-4">
-
             <h4>Receitas x Despesas</h4>
-
             <div style="height:350px;
                         background:#f8f9fa;
                         border:2px dashed #198754;
@@ -53,44 +40,28 @@ Dashboard
                         display:flex;
                         align-items:center;
                         justify-content:center;">
-
                 <h5>Gráfico ficará aqui</h5>
-
             </div>
-
         </div>
-
     </div>
-
-    <div class="col-lg-4">
-
+    <div class="col-12 col-lg-4">
         <div class="card p-4">
-
             <h4>Contas a vencer</h4>
-
             <table class="table mt-3">
-
                 <tr>
                     <td>Energia</td>
                     <td>12/07</td>
                 </tr>
-
                 <tr>
                     <td>Fornecedor</td>
                     <td>15/07</td>
                 </tr>
-
                 <tr>
                     <td>Internet</td>
                     <td>18/07</td>
                 </tr>
-
             </table>
-
         </div>
-
     </div>
-
 </div>
-
 {% endblock %}
