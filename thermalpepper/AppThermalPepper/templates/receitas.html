@@ -12,13 +12,13 @@ Receitas - Thermal Pepper
             <i class="bi bi-bank text-success"></i>
             Receitas
         </h2>
-        <button class="btn btn-success">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalNovaReceita">
             <i class="bi bi-plus-circle"></i>
             Nova Receita
         </button>
     </div>
 </div>
-    <!-- CARDS -->
+<!-- CARDS -->
 <div class="container text-center">
     <div class="row g-4 mb-4">
         <div class="col-md-3">
@@ -28,7 +28,7 @@ Receitas - Thermal Pepper
                         Total Recebido
                     </h6>
                     <h2>
-                        R$ 25.800,00
+                        R$ {{ total_recebido.total|default:"0,00" }}
                     </h2>
                     <span class="badge bg-success">
                 Entradas
@@ -43,7 +43,7 @@ Receitas - Thermal Pepper
                         Receitas do Mês
                     </h6>
                     <h2>
-                        R$ 8.400,00
+                        R$ {{ receitas_mes.total|default:"0,00" }}
                     </h2>
                     <span class="badge bg-primary">
                 Julho
@@ -58,7 +58,7 @@ Receitas - Thermal Pepper
                         Pendentes
                     </h6>
                     <h2>
-                        R$ 2.100,00
+                        R$ {{ pendentes.total|default:"0,00" }}
                     </h2>
                     <span class="badge bg-warning text-dark">
                 A receber
@@ -72,12 +72,17 @@ Receitas - Thermal Pepper
                     <h6 class="card-title">
                         Última Venda
                     </h6>
-                    <h2>
-                        R$ 350,00
-                    </h2>
+                    {% if ultima_venda %}
+                    <h2>R$ {{ ultima_venda.valor }}</h2>
                     <span class="badge bg-success">
-                Hoje
-            </span>
+                        {{ ultima_venda.data|date:"d/m/Y" }}
+                    </span>
+                {% else %}
+                    <h2>R$ 0,00</h2>
+                    <span class="badge bg-secondary">
+                        Nenhuma venda
+                    </span>
+                {% endif %}
                 </div>
             </div>
         </div>
@@ -112,63 +117,122 @@ Receitas - Thermal Pepper
                 </tr>
                 </thead>
                 <tbody>
+                {% for receita in receitas %}
+
                 <tr>
+
+                    <td>{{ receita.data }}</td>
+
+                    <td>{{ receita.descricao }}</td>
+
+                    <td>{{ receita.cliente }}</td>
+
+                    <td>R$ {{ receita.valor }}</td>
+
                     <td>
-                        01/01/2002
+        <span class="badge bg-success">
+            {{ receita.get_status_display }}
+        </span>
                     </td>
+
                     <td>
-                        Emprestimo
-                    </td>
-                    <td>
-                        Banco do Brasil
-                    </td>
-                    <td>
-                        R$ 8.500,00
-                    </td>
-                    <td>
-                    <span class="badge bg-success">
-                        Ativa
-                    </span>
-                    </td>
-                    <td>
+
                         <button class="btn btn-sm btn-outline-success">
                             <i class="bi bi-pencil"></i>
                         </button>
+
                         <button class="btn btn-sm btn-outline-danger">
                             <i class="bi bi-trash"></i>
                         </button>
+
                     </td>
+
                 </tr>
-                <tr>
-                    <td>
-                        Caixa 02/02/2002
-                    </td>
-                    <td>
-                        Lote
-                    </td>
-                    <td>
-                        Eduarda
-                    </td>
-                    <td>
-                        R$ 1.500,00
-                    </td>
-                    <td>
-                    <span class="badge bg-success">
-                        Ativa
-                    </span>
-                    </td>
-                    <td>
-                        <button class="btn btn-sm btn-outline-success">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-sm btn-outline-danger">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </td>
-                </tr>
+
+                {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
+</div>
+<!-- MODAL NOVA RECEITA -->
+
+<div class="modal fade" id="modalNovaReceita" tabindex="-1">
+    <div class="modal-dialog mt-5 modal-dialog-scrollable" style="margin-top: 100px;">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-bank"></i>
+                        Nova Receita
+                    </h5>
+                    <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Data
+                        </label>
+                        <input type="date" class="form-control" name="data"></div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Descrição
+                        </label>
+                        <input type="text" class="form-control" name="descricao"></div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Cliente
+                        </label>
+                        <input type="text" class="form-control" name="cliente"></div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Valor
+                        </label>
+                        <input type="number" class="form-control" name="valor"></div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Status
+                        </label>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+
+                            <select class="form-select" name="status">
+                                <option value="recebido">RECEBIDA</option>
+                                <option value="a_receber">A RECEBER</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Observação
+                        </label>
+                        <textarea class="form-control" rows="5" name="observacao"></textarea>
+                    </div>
+                    <!-- só para testar o scroll -->
+                    <p>
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </p>
+                    <p>
+                        Mais informações da receita...
+                    </p>
+                    <p>
+                        Outros campos podem entrar aqui.
+                    </p>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal"> Cancelar</button>
+        <button class="btn btn-success" type="submit"> Salvar</button>
+    </div>
+</div>
+</div>
 </div>
 {% endblock %}

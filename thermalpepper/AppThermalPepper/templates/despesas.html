@@ -14,7 +14,7 @@ Despesas - Thermal Pepper
             <i class="bi bi-bank text-success"></i>
             Despesas
         </h2>
-        <button class="btn btn-success">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalNovaReceita">
             <i class="bi bi-plus-circle"></i>
             Nova Despesa
         </button>
@@ -174,4 +174,112 @@ Despesas - Thermal Pepper
         </div>
     </div>
 </div>
+<!-- MODAL NOVA RECEITA -->
+
+<div class="modal fade" id="modalNovaReceita" tabindex="-1">
+    <div class="modal-dialog mt-5 modal-dialog-scrollable" style="margin-top: 100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="bi bi-bank"></i>
+                    Nova Despesa
+                </h5>
+                <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Data
+                        </label>
+                        <input
+                                type="date"
+                                class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Descrição
+                        </label>
+                        <input
+                                type="text"
+                                class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Cliente
+                        </label>
+                        <input
+                                type="text"
+                                class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Valor
+                        </label>
+                        <input
+                                type="number"
+                                class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Status
+                        </label>
+                        <div class="col-2">
+                            <div class="dropdown ms-3">
+                                <button class="btn btn-primary dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                    Recebida
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'perfil' %}">
+                                            A Receeber
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Observação
+                        </label>
+                        <textarea
+                                class="form-control"
+                                rows="5"></textarea>
+                    </div>
+                    <!-- só para testar o scroll -->
+                    <p>
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </p>
+                    <p>
+                        Mais informações da receita...
+                    </p>
+                    <p>
+                        Outros campos podem entrar aqui.
+                    </p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+                <button
+                        class="btn btn-success">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
